@@ -1,4 +1,4 @@
-# michelle-bh.github.io
+# About Building Airline Confidence
 Building Airline Confidence - A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
 
 •	Airline Safety Statistics and Trends Dashboard.
