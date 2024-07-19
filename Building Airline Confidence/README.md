@@ -1,5 +1,5 @@
 # About Building Airline Confidence
-Building Airline Confidence - A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
+Building Airline Confidence - The airline industry has had a rough couple of years. This is a series of Tableau and PowerPoint visualizations and presentations to counteract the bad press and focus on rebuilding confidence in air travel and Southwest Airlines.
 
 •	Airline Safety Statistics and Trends Dashboard.
 
