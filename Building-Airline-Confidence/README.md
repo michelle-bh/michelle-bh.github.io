@@ -1,4 +1,4 @@
-link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
 # About Building Airline Confidence
 Building Airline Confidence - The airline industry has had a rough couple of years. This is a series of Tableau and PowerPoint visualizations and presentations to counteract the bad press and focus on rebuilding confidence in air travel and Southwest Airlines.
