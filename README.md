@@ -3,7 +3,7 @@
 # About Michelle Helfman's Portfolio
 Michelle Helfman's Data Science Portfolio consisting of 10 projects ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
 
-*	Building Airline Confidence:  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
+*	[Building Airline Confidence](Building-Airline-Confidence/README.md):  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
 
 *	Dodger Stadium Attendance:  Explore attendance at Los Angeles Dodger games by day of week, promotions, and opponents using Python (Jupyter Notebook)
 
