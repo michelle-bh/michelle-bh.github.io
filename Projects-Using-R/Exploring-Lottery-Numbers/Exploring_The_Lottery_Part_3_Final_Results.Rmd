@@ -1,0 +1,493 @@
+---
+title: "Final Project Part 3"
+author: "Michelle Helfman"
+date: "`r Sys.Date()`"
+output: pdf_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+library(ggplot2)
+library(lubridate)
+library(scales)
+library(pander)
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(plotly)
+library(reshape2)
+library(viridis)
+theme_set(theme_minimal())
+options(scipen=999)
+```
+
+
+```{r}
+## Load Data Files
+## Set the working directory
+setwd("C:/Masters Degree/DSC 520 Statistics for Data Science/Final  Project")
+
+## Mega Million Numbers Drawn
+mm_numbers_df <- read.csv("Final Datasets/Megamillions_Numbers.csv")  
+
+## Powerball Numbers Drawn
+pb_numbers_df <- read.csv("Final Datasets/Powerball_Numbers.csv")  
+
+## Mega Million Winning Jackpots
+mm_jackpot_df <- read.csv("Final Datasets/Megamillions_Jackpots.csv")  
+
+## Powerball Winning Jackpots
+pb_jackpot_df <- read.csv("Final Datasets/Powerball_Jackpots.csv")  
+
+## Mega Million Jackpots by State
+mm_state_df <- read.csv("Final Datasets/Megamillions_States_with_Jackpots.csv")
+
+## Powerball Jackpots by State
+pb_state_df <- read.csv("Final Datasets/Powerball_States_with_Jackpots.csv")
+
+## Set up information for visualizations
+## Count Numbers Drawn and take top 20
+mm_num_cnt_df <- as.data.frame(mm_numbers_df %>% group_by(game_name,number_drawn) %>% 
+  summarise(number_cnt = n()) %>% arrange(desc(number_cnt)))
+
+mm_top_20_nums_df <- mm_num_cnt_df[1:20,]
+mm_top_10_nums_df <- mm_num_cnt_df[1:10,]
+
+mm_distinct_dts_df <- as.data.frame(distinct(mm_numbers_df, drawing_date, .keep_all = TRUE))
+
+pb_num_cnt_df <- as.data.frame(pb_numbers_df %>% group_by(game_name,number_drawn) %>% 
+  summarise(number_cnt = n()) %>% arrange(desc(number_cnt)))
+
+pb_top_20_nums_df <- pb_num_cnt_df[1:20,]
+pb_top_10_nums_df <- pb_num_cnt_df[1:10,]
+
+pb_distinct_dts_df <- as.data.frame(distinct(pb_numbers_df, drawing_date, .keep_all = TRUE))
+
+combined_top_10_nums_df <- as.data.frame(rbind(mm_num_cnt_df[1:10,],pb_num_cnt_df[1:10,]))
+
+## Largest Jackpots
+mm_jackpots_srt_df <- mm_jackpot_df %>% arrange(desc(jackpot))
+mm_top_20_jackpots_df <- mm_jackpots_srt_df[1:20,]
+
+pb_jackpots_srt_df <- pb_jackpot_df %>% arrange(desc(jackpot))
+pb_top_20_jackpots_df <- pb_jackpots_srt_df[1:20,]
+
+## States with Most Winners
+mm_states_srt_df <- mm_state_df %>% arrange(desc(number_winners))
+mm_top_10_states_df <- mm_states_srt_df[1:10,]
+
+pb_states_srt_df <- pb_state_df %>% arrange(desc(number_winners))
+pb_top_10_states_df <- pb_states_srt_df[1:10,]
+
+combined_top_10_states_df <- as.data.frame(rbind(mm_states_srt_df[1:10,],pb_states_srt_df[1:10,]))
+
+## Winnings by Year
+mm_jackpot_year_df <- mm_jackpot_df %>% 
+  select(game_name, win_date,jackpot) %>% mutate(win_year=year(mdy(win_date)))
+mm_yearly_winnings <- as.data.frame(mm_jackpot_year_df %>% 
+    group_by(game_name,win_year) %>% summarise(jackpot_yr = sum(jackpot)/100000))
+
+pb_jackpot_year_df <- pb_jackpot_df %>% 
+  select(game_name, win_date,jackpot) %>% mutate(win_year=year(mdy(win_date))) 
+pb_yearly_winnings <- as.data.frame(pb_jackpot_year_df %>% 
+  group_by(game_name,win_year) %>% summarise(jackpot_yr = sum(jackpot)/100000))
+
+combined_yearly_winnings <- as.data.frame(rbind(mm_yearly_winnings,pb_yearly_winnings))
+
+## Time between Winners
+mm_jackpot_date_df <- mm_jackpot_df %>% 
+  select(game_name, win_date) %>% mutate(win_dt=mdy(win_date)) %>% arrange(win_dt)
+mm_jackpots_day_df <- mm_jackpot_date_df %>%  
+  mutate(mm_BETWEEN0=as.numeric(difftime(win_dt,lag(win_dt,1))),
+         mm_BETWEEN=ifelse(is.na(mm_BETWEEN0),0,mm_BETWEEN0)) %>% 
+  select(-mm_BETWEEN0)
+
+pb_jackpot_date_df <- pb_jackpot_df %>% 
+  select(game_name, win_date) %>% mutate(pb_win_dt=mdy(win_date)) %>% arrange(pb_win_dt)
+pb_jackpots_day_df <- pb_jackpot_date_df %>%  
+  mutate(pb_BETWEEN0=as.numeric(difftime(pb_win_dt,lag(pb_win_dt,1))),
+         pb_BETWEEN=ifelse(is.na(pb_BETWEEN0),0,pb_BETWEEN0)) %>% 
+  select(-pb_BETWEEN0)
+
+```
+
+# Introduction  
+
+Lotteries are everywhere.  You can buy tickets at grocery stores, gas stations, 
+airports, kiosks at the mall, everywhere...  Lottery sales exceeded $210 billion 
+in 2021, and individuals, families, friends, and groups of co-workers want their 
+piece of the lottery pie.
+
+[@mktsize] Lottery Market Size Statistics
+
+# What Is The Problem?
+
+There are so many lotteries, single-state, multi-state, entire countries, and even 
+spanning continents.  A lottery involves the drawing of numbers at random for a 
+prize.  Which lottery should someone play?  How does someone know which numbers to 
+choose?  Are some states better than others for purchasing tickets?  Are the numbers 
+really random?
+
+# How Do We Find The Answer?
+
+The two most popular lotteries in the United States are Powerball and Mega Millions.  
+Starting in January 2012 through October 15, 2022, the most common numbers, 
+largest jackpots, the time between winners, and the states that sold the winning 
+tickets are identified for each lottery.  Then, by comparing the Powerball and 
+Mega Millions results to each other, focusing on the commonalities and differences 
+to answer questions about which lottery to participate in, which numbers to include, 
+and which states to reside in when purchasing tickets.
+
+Statistical analysis of the available lottery data gives insight into the patterns 
+and frequency of the numbers drawn and the size and frequency of jackpots.  The 
+results will then be displayed graphically for ease of understanding.  
+
+\newpage
+# Start By Looking At The Numbers.  
+## Mega Millions - Most Popular Numbers, Largest Jackpots, and Winningest States  
+
+### Most Popular Lottery Numbers.
+```{r}
+colnames(mm_top_20_nums_df) <- c('Game Name','Number', 'Count')
+mm_num_max <- max(mm_top_20_nums_df$Number)
+mm_num_min <- min(mm_top_20_nums_df$Number)
+mm_num_drawings <- nrow(mm_distinct_dts_df)
+
+knitr::kable(mm_top_20_nums_df[, 2:3], "simple", col.names = c('Number', 'Times Drawn'))
+```
+
+
+
+The Mega Millions lottery is drawn twice a week on Tuesdays and Fridays. Since 
+January 2012, there have been `r toString(mm_num_drawings)` drawings.  The most 
+drawn number is `r toString(mm_num_max)` and the least is `r toString(mm_num_min)`.
+The table above shows the 20 most chosen lottery numbers.
+
+[@mmnumbers] Download Mega Millions Winning Numbers
+
+
+\newpage
+### Largest Lottery Jackpots.
+```{r}
+colnames(mm_top_20_jackpots_df) <- c('Game Name','Date', 'Jackpot')
+mm_jackpot_max <- max(mm_top_20_jackpots_df$Jackpot)
+mm_jackpot_min <- min(mm_top_20_jackpots_df$Jackpot)
+mm_jackpot_avg <- mean(mm_top_20_jackpots_df$Jackpot)
+mm_num_winning_jackpots <- nrow(mm_jackpot_df)
+
+mm_top_20_jackpots_df$Jackpot <- 
+  format(mm_top_20_jackpots_df$Jackpot,big.mark=",",scientific=FALSE)
+mm_jackpot_max <- format(mm_jackpot_max,big.mark=",",scientific=FALSE)
+mm_jackpot_min <- format(mm_jackpot_min,big.mark=",",scientific=FALSE)
+mm_jackpot_avg <- format(mm_jackpot_avg,big.mark=",",scientific=FALSE)
+
+knitr::kable(mm_top_20_jackpots_df[, 2:3], "simple", align="r")
+```
+
+Since 2012, there have been `r toString(mm_num_winning_jackpots)` winning jackpots.  The 
+largest jackpot was `r toString(mm_jackpot_max)` on 10/23/2018.  The smallest 
+was `r toString(mm_jackpot_min)` on 7/22/2016 and 9/18/2012.  The average payout was 
+`r toString(mm_jackpot_avg)` The table above lists the 20 largest jackpots.
+
+### States with Most Winners.
+```{r}
+knitr::kable(mm_top_10_states_df[, 2:3], "simple", col.names = c('State', '# Winners'))
+
+```
+
+
+While California has the most winners with 16, many states have had 0 winners.  
+No winning lottery tickets were purchased in Colorado, Connecticut, Delaware, 
+District of Columbia, Iowa, Kentucky, Louisiana, Maine, Mississippi, Montana, 
+Nebraska, New Mexico, North Dakota, Oklahoma, Oregon, South Dakota, Vermont, 
+Virgin Islands, West Virginia, Wyoming.  The above table lists the 10 states
+with the most winners. 
+
+[@mmjackpots] Mega Millions Winners and States
+
+\newpage
+## Powerball - Most Popular Numbers, Largest Jackpots, and Winningest States  
+
+### Most Popular Lottery Numbers.
+```{r}
+colnames(pb_top_20_nums_df) <- c('Game Name','Number', 'Count')
+pb_num_max <- max(pb_top_20_nums_df$Number)
+pb_num_min <- min(pb_top_20_nums_df$Number)
+pb_num_drawings <- nrow(pb_distinct_dts_df)
+
+knitr::kable(pb_top_20_nums_df[, 2:3], "simple", col.names = c('Number', 'Times Drawn'))
+```
+  
+  
+  
+The Powerball lottery was drawn twice a week on Wednesdays and Saturdays until 
+August 2021 when a Monday drawing was added. Since January 2012, there have been 
+`r toString(pb_num_drawings)` drawings.  The most drawn number is 
+`r toString(pb_num_max)` and the least is `r toString(pb_num_min)`.  The graph 
+above shows the 20 most chosen lottery numbers.
+
+[@pbnumbers] Download Powerball Winning Numbers
+
+\newpage
+### Largest Lottery Jackpots.
+```{r}
+colnames(pb_top_20_jackpots_df) <- c('Game Name','Date', 'Jackpot')
+pb_jackpot_max <- max(pb_top_20_jackpots_df$Jackpot)
+pb_jackpot_min <- min(pb_top_20_jackpots_df$Jackpot)
+pb_jackpot_avg <- mean(pb_top_20_jackpots_df$Jackpot)
+pb_num_winning_jackpots <- nrow(pb_jackpot_df)
+
+pb_top_20_jackpots_df$Jackpot <- 
+  format(pb_top_20_jackpots_df$Jackpot,big.mark=",",scientific=FALSE)
+pb_jackpot_max <- format(pb_jackpot_max,big.mark=",",scientific=FALSE)
+pb_jackpot_min <- format(pb_jackpot_min,big.mark=",",scientific=FALSE)
+pb_jackpot_avg <- format(pb_jackpot_avg,big.mark=",",scientific=FALSE)
+
+knitr::kable(pb_top_20_jackpots_df[, 2:3], "simple", align="r")
+```
+
+Since 2012, there have been `r toString(pb_num_winning_jackpots)` winning jackpots.  The 
+largest jackpot was `r toString(pb_jackpot_max)` on 1/13/2016.  The smallest was 
+`r toString(pb_jackpot_min)` on 6/10/2020.  The average payout was 
+`r toString(pb_jackpot_avg)` The table above lists the 20 largest jackpots.  
+
+* This information was collected on 10/15/2022 before the $2 billion
+Powerball jackpot on 11/7/2022 was awarded.
+
+### States with Most Winners.
+```{r}
+knitr::kable(pb_top_10_states_df[, 2:3], "simple", col.names = c('State', '# Winners'))
+
+```
+
+Indiana has the most winners with 39, but many states have had 0 winners.  
+No winning lottery tickets were purchased in Maine, Mississippi, North Dakota, 
+U.S. Virgin Islands, Wyoming.  The above table lists the 10 states with the 
+most winners.
+
+[@pbjackpots] Powerball Winners and States
+
+\newpage
+## Annual Payouts Of Lottery Winnings
+### Mega Millions - Annual Lottery Winnings Since 2012 
+```{r}
+#mm_yearly_winnings$win_year <- as.Date(mm_yearly_winnings$win_year)
+ggplot(data=mm_yearly_winnings, aes(x=win_year, y=jackpot_yr)) + 
+  geom_line(colour = "blue", size = 1) + 
+  geom_point(colour = "black", size = 2) + 
+  labs(title="Lottery Winnings by Year",x="Year", y = "Jackpot/100K") + 
+  scale_x_continuous(breaks = seq(2012, 2022, 1))
+
+mm_winnings_max <- max(mm_yearly_winnings$jackpot_yr)
+mm_winnings_min <- min(mm_yearly_winnings$jackpot_yr)
+mm_winnings_avg <- round(mean(mm_yearly_winnings$jackpot_yr),0)
+
+mm_winnings_max <- format(mm_winnings_max,big.mark=",",scientific=FALSE)
+mm_winnings_min <- format(mm_winnings_min,big.mark=",",scientific=FALSE)
+mm_winnings_avg <- format(mm_winnings_avg,big.mark=",",scientific=FALSE)
+
+```
+
+
+Year 2018 Mega Millions paid out the most winnings with `r toString(mm_winnings_max)`, 
+the smallest amount was `r toString(mm_winnings_min)` in 2020.  The average payout per 
+year was `r toString(mm_winnings_avg)`.  
+
+* 2020 was the start of the Covid-19 pandemic so a drop in payouts is expected.
+* Winning jackpot amounts are divided by 100K.
+
+
+\newpage
+### Powerball - Annual Lottery Winnings Since 2012 
+```{r}
+ggplot(data=pb_yearly_winnings, aes(x=win_year, y=jackpot_yr)) + 
+  geom_line(colour = "red", size = 1) + 
+  geom_point(colour = "black", size = 2) + 
+  labs(title="Lottery Winnings by Year",x="Year", y = "Jackpot/100K") + 
+  scale_x_continuous(breaks = seq(2012, 2022, 1)) + 
+  scale_y_continuous(breaks = seq(10000, 40000, 5000))
+
+pb_winnings_max <- max(pb_yearly_winnings$jackpot_yr)
+pb_winnings_min <- min(pb_yearly_winnings$jackpot_yr)
+pb_winnings_avg <- round(mean(pb_yearly_winnings$jackpot_yr),0)
+
+pb_winnings_max <- format(pb_winnings_max,big.mark=",",scientific=FALSE)
+pb_winnings_min <- format(pb_winnings_min,big.mark=",",scientific=FALSE)
+pb_winnings_avg <- format(pb_winnings_avg,big.mark=",",scientific=FALSE)
+
+```
+
+
+Year 2016 Mega Millions paid out the most winnings with `r toString(pb_winnings_max)`, 
+the smallest amount was `r toString(pb_winnings_min)` in 2020.  The average payout per 
+year was `r toString(pb_winnings_avg)`.  
+
+* 2020 was the start of the Covid-19 pandemic so a drop in payouts is expected.
+* Winning jackpot amounts are divided by 100K.
+
+\newpage
+## Time Between Winning Lotteries
+### Mega Millions - Frequency of Time Between Winning Lotteries
+```{r}
+ggplot(data=mm_jackpots_day_df, aes(x=mm_BETWEEN)) + 
+  geom_histogram(col = "black", fill = "blue") + 
+  labs(title="Frequency of Winning Lotteries",x="Days Between Wins", y="# Winners")  +
+  scale_x_continuous(breaks = seq(0, 140, 10)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2))
+
+mm_days_avg <- round(mean(as.numeric(mm_jackpots_day_df$mm_BETWEEN)),2)
+mm_days_max <- max(as.numeric(mm_jackpots_day_df$mm_BETWEEN))
+mm_days_min <- 3
+
+# This is the average:  `r toString(days_avg)`
+```
+
+The Mega Millions lottery drawings are Tuedays and Fridays so the minimum time 
+between winners is `r toString(mm_days_min)` days.  The longest period between 
+wins is `r toString(mm_days_max)` days with the average being 
+`r toString(mm_days_avg)`.  The biggest cluster is between 10 and 14 days.  Currently 
+the Mega Millions jackpots start at $20 million, the biggest jackpot of $1.5 billion 
+was at 91 days on 10/23/2018.  On 1/21/2021, at `r toString(mm_days_max)`, the 
+winning jackpot was $1 billion.
+
+\newpage
+### Powerball - Frequency of Time Between Winning Lotteries
+```{r}
+
+ggplot(data=pb_jackpots_day_df, aes(x=pb_BETWEEN)) + 
+  geom_histogram(col = "black", fill = "red") + 
+  labs(title="Frequency of Winning Lotteries",x="Days Between Wins", y="# Winners")  +
+  scale_x_continuous(breaks = seq(0, 140, 10)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2))
+
+pb_days_avg <- round(mean(as.numeric(pb_jackpots_day_df$pb_BETWEEN)),2)
+pb_days_max <- max(as.numeric(pb_jackpots_day_df$pb_BETWEEN))
+pb_days_min <- 3
+
+```
+
+
+The Powerball lottery drawings are Mondays, Wednesdays, and Fridays so the minimum time 
+between winners is `r toString(pb_days_min)` days.  The longest period between 
+wins is `r toString(pb_days_max)` days with the average being 
+`r toString(pb_days_avg)`.  The biggest cluster is between 7 and 10 days.  Currently 
+the Powerball jackpots start at $20 million, the biggest jackpot of $1.5 billion 
+was at 70 days on 1/13/2016.  On 1/22/2021, at `r toString(pb_days_max)`, the 
+winning jackpot was $731 million.
+
+\newpage
+# How Do Mega Millions and Powerball Compare?
+## Most Common Numbers Drawn
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('./Numbers_Drawn_Comparison.png')
+```
+
+
+While the most common numbers of the Mega Millions and Powerball lotteries are scattered throughout the 60 available numbers, the 3, 10 and 14 are popular to both lotteries.  There are no other commonalities between the 2 lotteries, adding support to the theory that lotteries are random.
+
+\newpage
+## Annual Jackpots, Yearly Comparison
+
+```{r}
+
+ggplot(data=mm_yearly_winnings, aes(x=win_year, group="Game Name")) +
+  geom_line(aes(y = jackpot_yr, colour = "Mega Millions")) +
+  geom_line(data=pb_yearly_winnings, aes(y = jackpot_yr,colour="Powerball")) +
+  scale_colour_manual("",
+            breaks = c("Mega Millions", "Powerball"),
+            values = c("blue", "red")) +
+            xlab("Year") + ylab("Annual Jackpots/100K") + 
+  scale_x_continuous(breaks = seq(2012, 2022, 1)) + 
+  scale_y_continuous(breaks = seq(10000, 40000, 5000))
+```
+
+Lottery payouts are directly tied to ticket sales.  More sales means larger jackpots and larger annual payouts.  In 2010, the Mega Millions and Powerball lotteries had a cross-sales expansion.  This is where states and locations already selling Powerball would now sell Mega Millions tickets and those selling Mega Millions would now sell Powerball tickets.  In recent years, both lotteries are in sync with their annual payouts, but in 2012 and 2013, while Powerball annual winnings increased, Mega Millions decreased.  This could be due to post expansion adoption issues.  Mega Millions expanded into 31 states, while Powerball added an additional 14 states for sales.  
+
+* The Powerball jackpot winnings do not include the $2 billion Powerball jackpot 
+on 11/7/2022.
+* Winning jackpot amounts are divided by 100K.
+
+[@pb2010;@mm2010] Powerball History and Mega Millions Participating States
+
+\newpage
+## States With The Most Winners
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('./States_Comparison.png')
+```
+
+
+Whether the states have large populations or small, any state can have lottery winners.  Starting in 2012, Powerball has more people winning jackpots overall.  The states with the largest populations should have more ticket sales leading to more winners, but this graph shows states with smaller populations have a more significant number of jackpot winners.  Indiana, Minnesota, and Missouri have the most winners.  These states were already selling Powerball tickets when they started participating in the Mega Millions as part of the cross-sales expansion of 2010.  This might be due to the lack of familiarity with the Mega Millions lottery and being comfortable in purchasing Powerball tickets.
+
+
+\newpage
+# The Results - Expected or Surprising
+
+## What Met Expectations?  
+  1.  The outrageously large lottery prizes (over $1 billion) for both lotteries 
+  are extremely rare and take a long time to build up.  Most of the winning 
+  numbers (50%), are drawn at less than 40 days.
+  2.  The 2 lotteries are separate with very few commonalities with regard to 
+  numbers drawn and states where winners reside.
+  3.  The effect Covid-19 in 2020 had on lottery ticket sales and jackpot sizes 
+  due to the uncertainty of continues employment, quarantines, and the lottery 
+  sales locations being closed.
+  
+## What Was Surprising?  
+  1.  The longest periods between winning drawings did not produce the largest 
+  jackpots.  The largest Powerball jackpot ($1.5 billion) was at 70 days, while 
+  the jackpot produced at 126 days had winnings of $731 million. For Mega Millions, 
+  the largest jackpot ($1.5 billion) was at 91 days, while the jackpot produced 
+  as 129 days was only $1 billion.
+  2.  The longest time between winners for both Mega Millions and Powerball 
+  happened at the same time frame between mid-September 2020 through the week of 
+  1/20/2021.
+  3.  The states with the biggest population did not produce the most jackpot 
+  winners.  Ticket sales do not dictate whee the winners come from.
+  4.  There was a significant drop in Mega Millions payouts for 2017 without any 
+  discern-able reason beyond Powerball having it's best year in 2016.  
+  
+# What Are The Limitations And Can It Be Expanded To Produce Useable Results?
+The scope of this lottery study was looking at the largest jackpots and the time 
+between winners.  Looking at winning smaller amounts using 3 numbers, might produce 
+results that could predict a payout.  Also exploring numbers drawn in state lotteries, 
+possibly a small sampling will produce predictable winning results.
+
+# Final Thoughts.
+Lotteries like Mega Millions and Powerball are just a set of balls of the same 
+weight and size that roll around in an air filled container until one is captured 
+and the number is revealed.  Everything is equal, making these lotteries truly 
+random and winners are really the luck of the draw.
+
+
+\newpage
+# Datasets (Select Description to Open Website)
+The informataion was collected on October 15, 2022
+
+***[Powerball drawings from Feburary 2010 to present](https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/download.html)*** - This data has 11 columns including the drawing date that is broken into 3 
+columns that will be concatenated into a usable date column.  In 2012, the Power 
+Play was introduced so prior to that date, this is missing, but will not needed
+for this project. Finally the resulting dataset will only include lottery 
+drawings for January 2012 to present.
+
+***[Mega Million drawings from December 2003 to present](https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/download.html)*** - This data has 11 columns including the drawing date that is broken 
+into 3 columns that will be concatenated into a usable date column.  Finally the 
+resulting dataset will only include lottery drawings for January 2012 to present.  
+
+***[Powerball - Winning Jackpot and State information 2003 to present](https://www.powerball.net/winners)*** - This webpage has both state and 
+jackpot information.  The dataset with state information has 3 columns.  The
+jackpot related data has 6 columns.  Two columns have jackpot amounts, I will
+be using the Annuity Value column since this is the publicized amount. 
+
+***[Mega Millions - Winning Jackpot and State information from 2002 to present](https://mega-millions.com/winners)*** - This webpage has both state and 
+jackpot information.  The dataset with state information has 3 columns.  The
+jackpot related data has 6 columns.  The drawing date includes the day of
+the week, which will need to be removed before standardizing this 
+particular column.
+
+# References
+
+
+
+
