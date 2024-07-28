@@ -1,5 +1,8 @@
-# About Other Favorite Stories
-Other Favorite Stories - A collection of writings and presentations
+<link rel="stylesheet" href="/assets/css/main.css">
+
+# Other Favorite Stories
+
+A collection of favorite writings and presentations
 
 *	A Picture Speaks 1000 Words - Presentation of how the same five years of Jeep sales can be visually explained.
 

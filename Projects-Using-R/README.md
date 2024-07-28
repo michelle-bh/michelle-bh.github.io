@@ -1,4 +1,7 @@
-# About Projects Using R
+<link rel="stylesheet" href="/assets/css/main.css">
+
+# Projects Using R
+
 Projects Using R – Two projects created using R code:
 
 *	[Exploring Lottery Numbers](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Projects-Using-R/Exploring-Lottery-Numbers/README.md) - Using statistical analysis and visualizations explore the Powerball and Mega Millions lotteries.

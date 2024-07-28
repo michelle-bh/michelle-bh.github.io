@@ -1,5 +1,8 @@
-# About Predicting Bank Failures
-Predicting Bank Failures – Based on current and historical information from the FDIC, can we identify which banks might fail in the near future?  
+<link rel="stylesheet" href="/assets/css/main.css">
+
+# Predicting Bank Failures
+
+Based on current and historical information from the FDIC, can we identify which banks might fail in the near future?  
 
 *	Exploratory Data Analysis and Predictive Models using Python (Jupyter Notebook).
 

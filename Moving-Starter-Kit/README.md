@@ -1,5 +1,8 @@
-# About Moving Starter Kit
-Moving Starter Kit – A starting point for moving to a new city with demographics, crime statistics, weather, and other regional information using different types of data sources:  Excel File, API, Website, and SQL to put it all together
+<link rel="stylesheet" href="/assets/css/main.css">
+
+# Moving Starter Kit
+
+A starting point for moving to a new city with demographics, crime statistics, weather, and other regional information using different types of data sources:  Excel File, API, Website, and SQL to put it all together
 
 *	Choosing the Topic and Creating the Initial Dataset
 
