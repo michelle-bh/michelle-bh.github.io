@@ -3,7 +3,7 @@
 # Michelle Helfman's Portfolio
 Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
 
-<div class="group">
+<div class="group" markdown="1">
 
 *	[Building Airline Confidence](Building-Airline-Confidence/README.md):  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
 
