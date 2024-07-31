@@ -3,6 +3,8 @@
 # Michelle Helfman's Portfolio
 Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
 
+<div class="group">
+
 *	[Building Airline Confidence](Building-Airline-Confidence/README.md):  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
 
 *	[Dodger Stadium Attendance](Dodger-Stadium-Attendance/README.md):  Explore attendance at Los Angeles Dodger games by day of week, promotions, and opponents using Python (Jupyter Notebook)
@@ -22,4 +24,6 @@ Michelle Helfman's Data Science Portfolio consisting of 10 project sections rang
 *	[Projects Using R](Projects-Using-R/README.md):  Exploring lottery numbers to try and predict winners and samples of analytic classifiers such as KNN Binary, K Nearest Neighbor (KNN), and Trinary Classifiers using R.
 
 *	Saved For Final Class (DSC 680)
+
+</div>
 
