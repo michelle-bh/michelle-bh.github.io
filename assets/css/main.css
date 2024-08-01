@@ -7,7 +7,12 @@
 */
 
 .group {
-    background-color: #815fcf;
+	background-color: #815fcf;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 html, body, div, span, applet, object,
