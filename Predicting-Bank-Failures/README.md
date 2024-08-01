@@ -8,4 +8,4 @@ Based on current and historical information from the FDIC, can we identify which
 
 *	Project Summary and Recommendations
 
-[Check out the Predicting Bank Failure project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Predicting-Bank-Failure)
+[Check out the Predicting Bank Failures project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Predicting-Bank-Failures)
