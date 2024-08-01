@@ -7,3 +7,8 @@ What drives attendance at Dodger Stadium?  Is it the day of the week, time of ye
 *	Exploring the Dodger Stadium attendance, through the use of visualizations and correlations with commentaries using Python (Jupyter Notebook).
 
 [Check out the Dodger Stadium Attendance project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Dodger-Stadium-Attendance)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+
