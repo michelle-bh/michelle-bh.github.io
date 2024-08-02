@@ -19,7 +19,7 @@ Michelle Helfman's Data Science Portfolio consisting of 10 project sections rang
 
 *	[Dodger Stadium Attendance](Dodger-Stadium-Attendance/README.md):  Explore attendance at Los Angeles Dodger games by day of week, promotions, and opponents using Python (Jupyter Notebook)
 
-*	[Electric Vehicle Sales Exploration](Electric-Vehicles-Sales-Exploration/README.md):  Using Big Data, the sales of electric vehicles in Seattle, Washington, are explored to facilitate advertising targeting by zip code to create additional profits.  Python (Jupyter Notebook), Apache NiFi, Hadoop HDFS, and Apache Hive
+*	[Electric Vehicles Sales Exploration](Electric-Vehicles-Sales-Exploration/README.md):  Using Big Data, the sales of electric vehicles in Seattle, Washington, are explored to facilitate advertising targeting by zip code to create additional profits.  Python (Jupyter Notebook), Apache NiFi, Hadoop HDFS, and Apache Hive
 
 *	[Evaluating Credit Risk](Evaluating-Credit-Risk/README.md):  Demographics, current and historical loan information, and credit risk are evaluated for a new loan application using Python (Jupyter Notebook).
 
