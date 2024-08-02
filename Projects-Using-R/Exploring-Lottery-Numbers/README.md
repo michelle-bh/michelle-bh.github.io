@@ -11,3 +11,8 @@ Diving into the Powerball and Mega Millions lotteries to see if winning lottery 
 *	Final Results - Exploring which numbers are drawn the most, in which states have the most winners, and information about the size of the Powerball and Mega Millions jackpots.
 
 [Check out the Exploring Lottery Numbers project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Projects-Using-R/Exploring-Lottery-Numbers)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+

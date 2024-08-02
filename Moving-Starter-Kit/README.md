@@ -21,3 +21,8 @@ A starting point for moving to a new city with demographics, crime statistics, w
 *	Summarize the entire process
 
 [Check out the Moving Starter Kit project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Moving-Starter-Kit)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+

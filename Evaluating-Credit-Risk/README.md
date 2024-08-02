@@ -15,3 +15,8 @@ Can we identify who may or may not be at risk of non-paying a loan before approv
 *	Evaluating Credit Risk Presentation.
 
 [Check out the Evaluating Credit Risk project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Evaluating-Credit-Risk)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+

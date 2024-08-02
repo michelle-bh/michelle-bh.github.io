@@ -15,3 +15,8 @@ A collection of favorite writings and presentations
 *	Using AI in College Admissions - Discuss using Machine Learning and Artificial Intelligence to evaluate admission requests and recommend applicants for further evaluation and the biases built into the system.
 
 [Check out the Other Favorite Stories project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Other-Favorite-Stories)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+

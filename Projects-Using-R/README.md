@@ -8,3 +8,7 @@ Projects Using R – Two projects created using R code:
 
 *	[R Classifiers](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Projects-Using-R/R-Classifiers/README.md) - Visual depiction of various classifiers using R code. 
 
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+
