@@ -2,7 +2,7 @@
 
 <div class="nav" markdown="1">
 
-[Portfolio](Michelle-Helfmans-Portfolio)
+[Portfolio](#Michelle-Helfmans-Portfolio)
 
 </div>
 
