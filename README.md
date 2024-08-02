@@ -10,7 +10,7 @@ Enjoy!
 
 </div>
 
-![JD Power logo](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/JD_Power_Award.JPG)
+![JD Power logo](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/JD_Power_Award.JPG?raw=true)
 
 # Michelle Helfman's Portfolio
 Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
