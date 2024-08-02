@@ -20,5 +20,5 @@ The airline industry has had a rough couple of years. This is a series of Tablea
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
