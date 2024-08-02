@@ -13,3 +13,7 @@ Using Big Data, the sales of electric vehicles in Seattle, Washington, are explo
 *	Data is imported into Apache Hive for final evaluation and recommendations.
 
 [Check out the Electric Vehicle Sales Exploration project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Electric-Vehicles-Sales-Exploration)
+
+
+[Back](../README.md)U+0009[Home](https://michelle-bh.github.io/)
+

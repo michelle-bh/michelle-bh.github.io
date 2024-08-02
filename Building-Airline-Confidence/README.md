@@ -17,3 +17,8 @@ The airline industry has had a rough couple of years. This is a series of Tablea
 *	Commentaries
 
 [Check out the Building Airline Confidence project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Building-Airline-Confidence)
+
+
+
+[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+
