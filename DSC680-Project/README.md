@@ -4,5 +4,5 @@ Placeholder for last project
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

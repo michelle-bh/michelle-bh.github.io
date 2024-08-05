@@ -14,5 +14,5 @@ Diving into the Powerball and Mega Millions lotteries to see if winning lottery 
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

@@ -24,5 +24,5 @@ A starting point for moving to a new city with demographics, crime statistics, w
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

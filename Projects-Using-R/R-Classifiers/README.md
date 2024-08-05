@@ -8,5 +8,5 @@ Visual samples of Binary, Trinary, and K Nearest Neighbor Classifiers.  Also inc
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

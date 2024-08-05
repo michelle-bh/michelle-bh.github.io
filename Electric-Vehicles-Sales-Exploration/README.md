@@ -16,5 +16,5 @@ Using Big Data, the sales of electric vehicles in Seattle, Washington, are explo
 
 
 
-[Back](../README.md)     [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

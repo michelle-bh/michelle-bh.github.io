@@ -10,5 +10,5 @@ What drives attendance at Dodger Stadium?  Is it the day of the week, time of ye
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

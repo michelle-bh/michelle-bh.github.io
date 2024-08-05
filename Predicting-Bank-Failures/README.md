@@ -12,5 +12,5 @@ Based on current and historical information from the FDIC, can we identify which
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

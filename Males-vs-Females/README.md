@@ -16,5 +16,5 @@ Males vs Females - Have women finally caught up to men? To answer that question,
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

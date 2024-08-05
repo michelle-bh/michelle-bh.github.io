@@ -18,5 +18,5 @@ Can we identify who may or may not be at risk of non-paying a loan before approv
 
 
 
-[Back](../README.md)       [Home](https://michelle-bh.github.io/)
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
