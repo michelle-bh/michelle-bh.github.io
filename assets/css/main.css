@@ -7,7 +7,7 @@
 */
 
 .group {
-	background-color: #815fcf;
+	background-color: #BFC1C2;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 1px;
@@ -111,7 +111,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #A020F0;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
