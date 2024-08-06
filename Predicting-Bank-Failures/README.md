@@ -14,5 +14,8 @@ Based on current and historical information from the FDIC, can we identify which
 
 </div>
 
+<div class="nav" markdown="1">
+
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
+</div>
