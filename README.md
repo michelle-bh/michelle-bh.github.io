@@ -53,7 +53,7 @@ Michelle Helfman's Data Science Portfolio consisting of 10 project sections rang
 
 *	[Other Favorite Stories](Other-Favorite-Stories/README.md):  This is a collection of my favorite stories and presentations.
 
-*	[Predicting Bank Failure](Predicting-Bank-Failure/README.md):  This utilizes analytics to predict the failure or solvency of banks in the United States using Python (Jupyter Notebook).
+*	[Predicting Bank Failures](Predicting-Bank-Failures/README.md):  This utilizes analytics to predict the failure or solvency of banks in the United States using Python (Jupyter Notebook).
 
 *	[Projects Using R](Projects-Using-R/README.md):  Exploring lottery numbers to try and predict winners and samples of analytic classifiers such as KNN Binary, K Nearest Neighbor (KNN), and Trinary Classifiers using R.
 
