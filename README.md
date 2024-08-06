@@ -4,7 +4,7 @@
 
 <div class="nav" markdown="1">
 
-[About](#Welcome) &nbsp; &nbsp; [Contact](#contract-me) &nbsp; &nbsp; [Portfolio](#michelle-helfmans-portfolio)
+[About](#welcome) &nbsp; &nbsp; [Contact](#contact-me) &nbsp; &nbsp; [Portfolio](#michelle-helfmans-portfolio)
 
 </div>
 
@@ -39,7 +39,7 @@ Contact me through LinkedIn.
 
 <div class="group" markdown="1">
 
-Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
+**Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.**
 
 *	[Building Airline Confidence](Building-Airline-Confidence/README.md):  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
 
