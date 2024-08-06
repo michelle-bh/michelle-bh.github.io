@@ -17,6 +17,9 @@
 
 .nav {
     text-align: right;
+}
+
+.nav a {
 	color: black
 }
 
