@@ -2,6 +2,8 @@
 
 # Electric Vehicle Sales Exploration
 
+<div class="group" markdown="1">
+
 Using Big Data, the sales of electric vehicles in Seattle, Washington, are explored to facilitate advertising targeting by zip code to create additional profits.
 
 *	Exploratory Data Analysis using Python (Jupyter Notebook).
@@ -14,7 +16,7 @@ Using Big Data, the sales of electric vehicles in Seattle, Washington, are explo
 
 [Check out the Electric Vehicle Sales Exploration project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Electric-Vehicles-Sales-Exploration)
 
-
+</div>
 
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

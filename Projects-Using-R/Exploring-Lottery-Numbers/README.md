@@ -2,6 +2,8 @@
 
 # Exploring Lottery Numbers
 
+<div class="group" markdown="1">
+
 Diving into the Powerball and Mega Millions lotteries to see if winning lottery numbers can be predicted or if the numbers are truly random using R code.
 
 *	Problem Statement - What answers are we searching for with the lottery data.
@@ -12,7 +14,7 @@ Diving into the Powerball and Mega Millions lotteries to see if winning lottery 
 
 [Check out the Exploring Lottery Numbers project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Projects-Using-R/Exploring-Lottery-Numbers)
 
-
+</div>
 
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

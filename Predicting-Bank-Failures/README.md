@@ -2,6 +2,8 @@
 
 # Predicting Bank Failures
 
+<div class="group" markdown="1">
+
 Based on current and historical information from the FDIC, can we identify which banks might fail in the near future?  
 
 *	Exploratory Data Analysis and Predictive Models using Python (Jupyter Notebook).
@@ -10,7 +12,7 @@ Based on current and historical information from the FDIC, can we identify which
 
 [Check out the Predicting Bank Failures project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Predicting-Bank-Failures)
 
-
+</div>
 
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 

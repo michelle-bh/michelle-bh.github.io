@@ -2,6 +2,8 @@
 
 # Other Favorite Stories
 
+<div class="group" markdown="1">
+
 A collection of favorite writings and presentations
 
 *	A Picture Speaks 1000 Words - Presentation of how the same five years of Jeep sales can be visually explained.
@@ -16,7 +18,7 @@ A collection of favorite writings and presentations
 
 [Check out the Other Favorite Stories project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Other-Favorite-Stories)
 
-
+</div>
 
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
