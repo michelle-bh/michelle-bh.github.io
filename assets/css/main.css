@@ -37,8 +37,7 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: x-large;
-	font: inherit;
+	font-size: large;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
