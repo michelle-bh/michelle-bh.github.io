@@ -6,10 +6,9 @@
 
 </div>
 
-<div class="group" markdown="1">
-
-
 # Welcome!
+
+<div class="group" markdown="1">
 
 These are some of my favorite projects and writings I created during the 2 years I spent earning my Master of Science in Data Science from Bellevue University in Bellevue, Nebraska.  The topics range from predicting bank failures to finding a new place to live to exploring the sales of electric vehicles.  Other topics include attendance at Dodger Stadium, a series of presentations on airline safety, and finally, my favorite writing, "Can Chicken Soup Cure the Common Cold?"
 
@@ -17,11 +16,11 @@ Enjoy!
 
 </div>
 
-
-
-<div class="group" markdown="1">
+![lets_connect](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/Lets_Connect.jpg?raw=true)
 
 # Contact Me
+
+<div class="group" markdown="1">
 
 I'm always interested in new opportunities and a chance to grow.
 
@@ -34,9 +33,10 @@ Contact me through LinkedIn.
 
 ![lightbulb_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/lightbulb_banner.jpg?raw=true)
 
+# Michelle Helfman's Portfolio
+
 <div class="group" markdown="1">
 
-# Michelle Helfman's Portfolio
 Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.
 
 *	[Building Airline Confidence](Building-Airline-Confidence/README.md):  A series of Tableau and PowerPoint visualizations and presentations focused on building confidence in air travel and Southwest Airlines.
