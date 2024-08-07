@@ -12,7 +12,7 @@
 
 <div class="group" markdown="1">
 
-**These are some of my favorite projects and writings I created during the 2 years I spent earning my Master of Science in Data Science from Bellevue University in Bellevue, Nebraska.  The topics range from predicting bank failures to finding a new place to live to exploring the sales of electric vehicles.  Other topics include attendance at Dodger Stadium, a series of presentations on airline safety, and finally, my favorite writing, "Can Chicken Soup Cure the Common Cold?"**
+**These are some of my favorite projects and writings I created during the 2 1/2 years I spent earning my Master of Science in Data Science degree from Bellevue University in Bellevue, Nebraska.  The topics range from predicting bank failures to finding a new place to live to exploring the sales of electric vehicles.  Other topics include attendance at Dodger Stadium, a series of presentations on airline safety, and finally, my favorite writing, "Can Chicken Soup Cure the Common Cold?"**
 
 **Enjoy!**
 
@@ -30,6 +30,12 @@
 
 [My LinkedIn Page](https://www.linkedin.com/in/michelle-helfman-242a582/)
 
+
+</div>
+
+<div class="nav" markdown="1">
+
+[Back to top](#readme)
 
 </div>
 
@@ -63,3 +69,8 @@
 
 </div>
 
+<div class="nav" markdown="1">
+
+[Back to top](#readme)
+
+</div>
