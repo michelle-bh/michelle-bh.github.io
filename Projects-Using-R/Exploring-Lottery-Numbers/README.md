@@ -1,10 +1,12 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 
+![michelle_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/michelle_banner.jpg?raw=true)
+
 # Exploring Lottery Numbers
 
 <div class="group" markdown="1">
 
-Diving into the Powerball and Mega Millions lotteries to see if winning lottery numbers can be predicted or if the numbers are truly random using R code.
+**Diving into the Powerball and Mega Millions lotteries to see if winning lottery numbers can be predicted or if the numbers are truly random using R code.**
 
 *	Problem Statement - What answers are we searching for with the lottery data.
 
@@ -16,5 +18,8 @@ Diving into the Powerball and Mega Millions lotteries to see if winning lottery 
 
 </div>
 
+<div class="nav" markdown="1">
+
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
+</div>

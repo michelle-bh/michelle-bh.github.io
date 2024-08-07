@@ -1,10 +1,12 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 
+![michelle_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/michelle_banner.jpg?raw=true)
+
 # Building Airline Confidence
 
 <div class="group" markdown="1">
 
-The airline industry has had a rough couple of years. This is a series of Tableau and PowerPoint visualizations and presentations to counteract the bad press and focus on rebuilding confidence in air travel and Southwest Airlines.
+**The airline industry has had a rough couple of years. This is a series of Tableau and PowerPoint visualizations and presentations to counteract the bad press and focus on rebuilding confidence in air travel and Southwest Airlines.**
 
 *	Airline Safety Statistics and Trends Dashboard.
 
@@ -22,5 +24,8 @@ The airline industry has had a rough couple of years. This is a series of Tablea
 
 </div>
 
+<div class="nav" markdown="1">
+
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
+</div>

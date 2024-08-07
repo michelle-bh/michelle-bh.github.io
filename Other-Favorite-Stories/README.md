@@ -1,10 +1,12 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 
+![michelle_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/michelle_banner.jpg?raw=true)
+
 # Other Favorite Stories
 
 <div class="group" markdown="1">
 
-A collection of favorite writings and presentations
+**A collection of favorite writings and presentations.**
 
 *	A Picture Speaks 1000 Words - Presentation of how the same five years of Jeep sales can be visually explained.
 
@@ -20,5 +22,8 @@ A collection of favorite writings and presentations
 
 </div>
 
+<div class="nav" markdown="1">
+
 [Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
 
+</div>
