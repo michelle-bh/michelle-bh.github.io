@@ -18,6 +18,12 @@
 
 </div>
 
+<div class="nav" markdown="1">
+
+[Back to top](#README)
+
+</div>
+
 ![lets_connect](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/Lets_Connect.jpg?raw=true)
 
 # Contact Me
@@ -35,7 +41,7 @@
 
 <div class="nav" markdown="1">
 
-[Back to top](#michelle-bh)
+[Back to top](#README)
 
 </div>
 
@@ -71,6 +77,6 @@
 
 <div class="nav" markdown="1">
 
-[Back to top](#michelle-bh)
+[Back to top](#README)
 
 </div>
