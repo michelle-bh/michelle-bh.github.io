@@ -34,7 +34,7 @@
 
 **Contact me through LinkedIn.**
 
-**Check OUt my [Curriculum Vitae (CV)](Curriculum-Vitae/README.md) or visit [My LinkedIn Page](https://www.linkedin.com/in/michelle-helfman-242a582/)**
+**Check out my [Curriculum Vitae (CV)](Curriculum-Vitae/README.md) or visit [My LinkedIn Page](https://www.linkedin.com/in/michelle-helfman-242a582/)**
 
 
 </div>
