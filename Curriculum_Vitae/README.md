@@ -13,13 +13,13 @@ As a Technical Operations Analyst, I have actively contributed to ETL process im
 Dynamic Project Manager with a talent for attracting new clients and fostering long-term partnerships. My goal is to join a great company, continue growing in management, and take on challenging projects in big data and AI.
 
 SKILLS
-  ★★★★★ SQL Development
-  ★★★★★ Data Analysis
-  ★★★★★ Project Management
-  ★★★★★ ETL Process
-  ★★★★★ Technical Support
-  ★★★★★ Data Science
-  ★★★★★ Visualizations
+  * SQL Development
+  * Data Analysis
+  * Project Management
+  * ETL Process
+  * Technical Support
+  * Data Science
+  * Visualizations
 
 WORK EXPERIENCE
   * July 2019 – Present
