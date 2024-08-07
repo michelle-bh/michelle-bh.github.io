@@ -2,7 +2,7 @@
 
 <div class="nav" markdown="1">
 
-[About](#welcome) &nbsp; &nbsp; [Contact](#contact-me) &nbsp; &nbsp; [Portfolio](#michelle-helfmans-portfolio)
+[About](#welcome) &nbsp; &nbsp; [Contact](#contact-me) &nbsp; &nbsp; [Portfolio](#my-portfolio)
 
 </div>
 
@@ -47,7 +47,7 @@
 
 ![lightbulb_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/lightbulb_banner.jpg?raw=true)
 
-# Michelle Helfman's Portfolio
+# My Portfolio
 
 <div class="group" markdown="1">
 
