@@ -6,10 +6,7 @@
 
 <div class="group" markdown="1">
 
-<<<<<<< HEAD
 Michelle Helfman<br>
-=======
->>>>>>> cd9bb06b4a0b6a7e60acdd536b85ada57f2ba244
 Data Scientist
 
 
