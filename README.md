@@ -36,7 +36,7 @@
 
 **I'm always interested in new opportunities and a chance to grow.**
 
-**Check out my [Curriculum Vitae (CV)](Curriculum-Vitae/README.md) or visit [My LinkedIn Page](https://www.linkedin.com/in/michelle-helfman-242a582/)**
+**Take a look at my [Curriculum Vitae (CV)](Curriculum-Vitae/README.md) or visit [My LinkedIn Page](https://www.linkedin.com/in/michelle-helfman-242a582/)**
 
 **Contact me through LinkedIn.**
 
