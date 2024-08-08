@@ -32,7 +32,6 @@
 
 <div class="group" markdown="1">
 
-<br>
 
 **I'm always interested in new opportunities and a chance to grow.**
 
@@ -54,7 +53,7 @@
 
 <div class="group" markdown="1">
 
-<br>
+<br> 
 
 **Michelle Helfman's Data Science Portfolio consisting of 10 project sections ranging from Building Airline Confidence to Exploration of Electric Vehicle Sales to Predicting Bank Failures and more.**
 
