@@ -1,3 +1,11 @@
+<link rel="stylesheet" href="/assets/css/main.css">
+
+![michelle_banner](https://github.com/michelle-bh/michelle-bh.github.io/blob/main/images/michelle_banner.jpg?raw=true)
+
+# Curriculum Vitae (CV)
+
+<div class="group" markdown="1">
+
 Michelle Helfman
 Data Scientist
 
@@ -54,4 +62,10 @@ EDUCATION
   * Houston Baptist University,  Bachelor of Science Business Management
   * Houston Baptist University,  Bachelor of Science Computer Information Systems Management
 
+</div>
 
+<div class="nav" markdown="1">
+
+[Back](../README.md) &nbsp; &nbsp; [Home](https://michelle-bh.github.io/)
+
+</div>
