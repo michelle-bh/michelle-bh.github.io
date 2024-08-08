@@ -6,7 +6,8 @@
 
 <div class="group" markdown="1">
 
-<br>
+<p></p>
+
 Michelle Helfman<br>
 Data Scientist
 

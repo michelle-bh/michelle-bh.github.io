@@ -6,6 +6,8 @@
 
 <div class="group" markdown="1">
 
+<p></p>
+
 **Projects Using R – Two projects created using R code:**
 
 *	[Exploring Lottery Numbers](Exploring-Lottery-Numbers/README.md) - Using statistical analysis and visualizations explore the Powerball and Mega Millions lotteries.

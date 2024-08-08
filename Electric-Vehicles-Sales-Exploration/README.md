@@ -6,6 +6,8 @@
 
 <div class="group" markdown="1">
 
+<p></p>
+
 **Using Big Data, the sales of electric vehicles in Seattle, Washington, are explored to facilitate advertising targeting by zip code to create additional profits.**
 
 *	Exploratory Data Analysis using Python (Jupyter Notebook).

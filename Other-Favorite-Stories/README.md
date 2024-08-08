@@ -6,6 +6,8 @@
 
 <div class="group" markdown="1">
 
+<p></p>
+
 **A collection of favorite writings and presentations.**
 
 *	A Picture Speaks 1000 Words - Presentation of how the same five years of Jeep sales can be visually explained.
