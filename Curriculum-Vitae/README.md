@@ -14,16 +14,13 @@ Experienced Senior Developer Analyst with a proven track record of developing, r
 
 Dedicated Business Analyst with a background in technical support and a degree in Telematics Engineering. Proficient in SQL, data analysis, and strategic planning. I aim to further develop my analytical and project management skills while leading my team to achieve exceptional results. I am also eager to expand my knowledge and expertise in the field.
 
-Senior Systems Engineer with expertise in SAP MM, SAP BW, SAP Hana, and QlikView. My focus is on leveraging my technical skills to excel as a SAP Analyst. 
-
 As a Technical Operations Analyst, I have actively contributed to ETL process improvements, code cleanups, and developed tools to streamline operations. Skilled in ETL, SQL, Informatica, and Python, I am committed to driving process enhancements and efficiency. 
 
-Dynamic Project Manager with a talent for attracting new clients and fostering long-term partnerships. My goal is to join a great company, continue growing in management, and take on challenging projects in big data and AI.
+My goal is to join a great company, continue growing as a senior staff member, and take on challenging projects in big data and AI.
 
 SKILLS
   * SQL Development
   * Data Analysis
-  * Project Management
   * ETL Process
   * Technical Support
   * Data Science
