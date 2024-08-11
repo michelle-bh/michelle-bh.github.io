@@ -66,6 +66,8 @@
 
 *	[Evaluating Credit Risk](Evaluating-Credit-Risk/README.md):  Demographics, current and historical loan information, and credit risk are evaluated for a new loan application using Python (Jupyter Notebook).
 
+*   [Forecasting Natural Gas Prices](Forecasting-Natural-Gas-Prices/README.md):  Forecasting natural gas prices from historical data using Python (Jupyter Notebook).
+
 *	[Males vs Females](Males-vs-Females/README.md):  This project uses Python (Jupyter Notebook) and PowerPoint to examine women's advancements in education, employment, and income.
 
 *	[Moving Starter Kit](Moving-Starter-Kit/README.md):  In preparation for relocation to a new city, demographics, economics, internet, crime, and weather are examined by states using Python (Jupyter Notebook) and data via flat file, API, and scraping a website for information.
@@ -75,8 +77,6 @@
 *	[Predicting Bank Failures](Predicting-Bank-Failures/README.md):  This utilizes analytics to predict the failure or solvency of banks in the United States using Python (Jupyter Notebook).
 
 *	[Projects Using R](Projects-Using-R/README.md):  Exploring lottery numbers to try and predict winners and samples of analytic classifiers such as KNN Binary, K Nearest Neighbor (KNN), and Trinary Classifiers using R.
-
-*	Saved For Final Class (DSC 680)
 
 </div>
 
