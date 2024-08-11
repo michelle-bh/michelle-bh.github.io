@@ -20,7 +20,7 @@
 
 *   Audience Questions and Answers
 
-[Check out the Evaluating Credit Risk project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Forecasting-Natural-Gas-Prices)
+[Check out the Forecasting Natural Gas Prices project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Forecasting-Natural-Gas-Prices)
 
 </div>
 
