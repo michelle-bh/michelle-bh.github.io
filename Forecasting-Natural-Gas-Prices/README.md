@@ -8,7 +8,7 @@
 
 <p></p>
 
-**Exploring the use of historical natural gas prices to predict what prices will be in the future.  The results will be included as part of a decision on whether to purchase natural gas now for use in the winter or wait until closer to time of use to make the purchase.**
+**Exploring the use of historical natural gas prices to predict what prices will be in the future.  The results will be included as part of a decision on whether to purchase natural gas now for the winter or wait until closer to time of use to make the purchase.**
 
 *	Exploratory Data Analysis and Predictive Models using Python (Jupyter Notebook).
 

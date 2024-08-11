@@ -20,7 +20,7 @@
 
 *	Using AI in College Admissions - Discuss using Machine Learning and Artificial Intelligence to evaluate admission requests and recommend applicants for further evaluation and the biases built into the system.
 
-[Check out the Other Favorite Stories project](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Other-Favorite-Stories)
+[Check out my Other Favorite Stories](https://github.com/michelle-bh/michelle-bh.github.io/tree/main/Other-Favorite-Stories)
 
 </div>
 
