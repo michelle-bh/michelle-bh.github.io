@@ -60,6 +60,7 @@ WORK EXPERIENCE
 EDUCATION
   * Houston Baptist University,  Bachelor of Science Business Management
   * Houston Baptist University,  Bachelor of Science Computer Information Systems Management
+  * Bellevue University, Master of Science in Data Science
 
 </div>
 
